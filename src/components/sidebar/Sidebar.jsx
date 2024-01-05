@@ -2,12 +2,17 @@ import CloseFriend from "../closefriend/CloseFriend";
 import "./sidebar.css"
 import * as Icons from "@mui/icons-material";
 import {Users} from "../../dummyData";
+import User from "../user/User";
 
 export default function Sidebar(){
+   const userFilter = Users.filter ((u)=> u.id == 3);
     return (
         <div className="sidebar">
             <div className="sidebarWrapper">
                 <ul className="sidebarList">
+                {userFilter.map((u)=>(
+                    <User key={u.id} user={u}/>
+                   ))} 
                     <li className="sidebarListItem">
                        <Icons.RssFeed className="sidebarIcon"/>
                        <span className="sidebarListItemText">Feed</span>

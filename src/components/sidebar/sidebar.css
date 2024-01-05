@@ -25,11 +25,14 @@
 .sidebarListItem{
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    padding: 10px;
+}
+.sidebarListItem:hover{
+    background-color: gray;
+    color: #fff;
 }
 .sidebarIcon{
-    margin-right: 15px;
-    
+    margin-right: 15px;   
 }
 .sidebarButton{
     width: 150px;
